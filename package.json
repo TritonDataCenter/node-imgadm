@@ -23,7 +23,7 @@
     "qlocker": "1.0.1",
     "restify": "8.5.0",
     "rimraf": "2.2.8",
-    "sdc-clients": "git://github.com/joyent/node-sdc-clients.git#97ab67eaecfe9a66c7cda1e6c29b1276ed1d156b",
+    "sdc-clients": "https://github.com/joyent/node-sdc-clients.git#97ab67eaecfe9a66c7cda1e6c29b1276ed1d156b",
     "tabula": "1.4.1",
     "vasync": "1.6.2",
     "verror": "1.6.0"

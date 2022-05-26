@@ -4,7 +4,7 @@
 can import and destroy local images, present information about how they're
 being used.  To find and install new images, imgadm speaks to a server
 implementing the IMGAPI. The default and canonical IMGAPI server is the Joyent
-Images repository at <https://images.joyent.com>.
+Images repository at <https://images.smartos.org>.
 
 
 # Test Suite
@@ -70,7 +70,7 @@ NAME   SIZE  ALLOC   FREE  EXPANDSZ   FRAG    CAP  DEDUP  HEALTH  ALTROOT
 vms   99.5G   106K  99.5G         -     0%     0%  1.00x  ONLINE  -
 
 $ sudo sbin/imgadm import -P vms 3dbbdcca-2eab-11e8-b925-23bf77789921
-Importing 3dbbdcca-2eab-11e8-b925-23bf77789921 (centos-7@20180323) from "https://images.joyent.com"
+Importing 3dbbdcca-2eab-11e8-b925-23bf77789921 (centos-7@20180323) from "https://images.smartos.org"
 Gather image 3dbbdcca-2eab-11e8-b925-23bf77789921 ancestry
 Must download and install 1 image (249.9 MiB)
 Download 1 image        [=================================>] 100% 249.98MB  14.19MB/s    17s

@@ -21,6 +21,7 @@
  * CDDL HEADER END
  *
  * Copyright 2019 Joyent, Inc.
+ * Copyright 2022 MNX Cloud, Inc.
  *
  * * *
  *
@@ -77,8 +78,8 @@ test('setup: clean WRKDIR (' + WRKDIR + ')', function (t) {
     });
 });
 
-test('setup: ensure images.joyent.com source', function (t) {
-    exec('imgadm sources -a https://images.joyent.com', function (err, o, e) {
+test('setup: ensure images.smartos.org source', function (t) {
+    exec('imgadm sources -a https://images.smartos.org', function (err, o, e) {
         t.ifError(err);
         t.end();
     });
@@ -86,7 +87,7 @@ test('setup: ensure images.joyent.com source', function (t) {
 
 test('setup: get test image in local SDC IMGAPI (if available)', function (t) {
     var cmd = 'sdc-imgadm import ' + TEST_IMAGE_UUID +
-        ' -S https://images.joyent.com || true';
+        ' -S https://images.smartos.org || true';
     exec(cmd, function (err, o, e) {
         t.ifError(err);
         t.end();
@@ -104,7 +105,8 @@ test('setup: cache test image manifest', function (t) {
     var pth = format('%s/%s.imgmanifest', CACHEDIR, TEST_IMAGE_UUID);
     fs.exists(pth, function (exists) {
         if (!exists) {
-            var cmd = format('curl -kf https://images.joyent.com/images/%s >%s',
+            var cmd = format(
+                'curl -kf https://images.smartos.org/images/%s >%s',
                 TEST_IMAGE_UUID, pth);
             exec(cmd, function (err, stdout, stderr) {
                 t.ifError(err);
@@ -120,7 +122,7 @@ test('setup: cache test image file', function (t) {
     fs.exists(CACHEFILE, function (exists) {
         if (!exists) {
             var cmd = format(
-                'curl -kf https://images.joyent.com/images/%s/file >%s',
+                'curl -kf https://images.smartos.org/images/%s/file >%s',
                 TEST_IMAGE_UUID, CACHEFILE);
             exec(cmd, function (err, stdout, stderr) {
                 t.ifError(err);

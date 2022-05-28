@@ -1,4 +1,4 @@
-# imgadm(1M) -- Manage SmartOS virtual machine images
+# imgadm(8) -- Manage SmartOS virtual machine images
 
 ## SYNOPSIS
 
@@ -74,7 +74,7 @@ UUID.
         List and edit image sources.
 
         An image source is a URL to a server implementing the IMGAPI, or
-        the Docker Registry API. The default IMGAPI is https://images.joyent.com
+        the Docker Registry API. The default IMGAPI is https://images.smartos.org
 
         Usage:
             imgadm sources [--verbose|-v] [--json|-j]  # list sources
@@ -108,7 +108,7 @@ UUID.
 
         Examples:
             # Joyent's primary public image repository (defaults to "imgapi")
-            imgadm sources -a https://images.joyent.com
+            imgadm sources -a https://images.smartos.org
             # Docker Hub
             imgadm sources -a https://docker.io -t docker
             # Legacy SDC 6.5 DSAPI (deprecated)
@@ -600,4 +600,4 @@ The following exit values are returned:
 
 ## SEE ALSO
 
-    vmadm(1M), zfs(1M)
+    vmadm(8), zfs(8)

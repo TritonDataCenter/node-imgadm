@@ -6,6 +6,7 @@
 
 #
 # Copyright 2019 Joyent, Inc.
+# Copyright 2022 MNX Cloud, Inc.
 #
 
 NAME = imgadm
@@ -93,7 +94,7 @@ endif
 ifeq ($(shell uname -s),SunOS)
 	CTF_TARGETS =		helloctf
 	CTF_TEST_TARGETS =	test_ctf
-	include ./tools/mk/Makefile.ctf.defs
+	include ./deps/eng/tools/mk/Makefile.ctf.defs
 endif
 
 #
